@@ -1,0 +1,16 @@
+import random
+sozluk={"computer":"bilgisayar",
+"wave":"dalga","ocean":"okyanus",
+"fish":"balık",
+"beach":"plaj"}
+
+while len(sozluk)!=0:
+  kelime=random.choice(list(sozluk.keys()))
+  print(kelime)
+  cevap=input("türkçesi: ")
+  if sozluk[kelime]==cevap:
+    sozluk.pop(kelime)
+    print("doğru cevap")
+  else:
+    print("Cevap yanlış doğrusu :",sozluk[kelime])
+print("bu aşama başarıyla tamamlandı")
