@@ -1,0 +1,13 @@
+metin=input("Metni giriniz")
+kelimeler=metin.split(" ")
+sozluk={}
+for kelime in kelimeler:
+    sozluk[kelime]=kelimeler.count(kelime)
+
+say=max(sozluk.values())
+top=list(sozluk.values())
+kelimesayisi=len(kelimeler)
+oran=say/kelimesayisi*100
+for a in sozluk:
+    if sozluk[a]==say:
+        print("En Çok Kullanılan Kelime",a,"Oran:",oran)
