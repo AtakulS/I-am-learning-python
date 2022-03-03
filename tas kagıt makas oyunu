@@ -1,0 +1,28 @@
+import random
+secim=["tas","kagıt","makas"]
+tas=secim[0]
+kagıt=secim[1]
+makas=secim[2]
+sec=input("tas mı kagıt mı makas mı secim yap: ")
+bilgisayar=random.choice(secim)
+if sec==tas:
+  if bilgisayar==tas:
+    print("berabere","bilgisayar secimi",bilgisayar)
+  elif bilgisayar==kagıt:
+    print("kaybettiniz","bilgisayar secimi: ",bilgisayar)
+  else:
+    print("kazandınız","bilgisayar secimi: ",bilgisayar)
+elif sec==makas:
+  if bilgisayar==tas:
+    print("kaybettiniz","bilgisayar secimi: ",bilgisayar)
+  elif bilgisayar==kagıt:
+    print("kazandınız","bilgisayar secimi: ",bilgisayar)
+  else:
+    print("berabere","bilgisayar secimi: ",bilgisayar)
+elif sec==kagıt:
+  if bilgisayar==tas:
+    print("kazandınız","bilgisayar secimi: ",bilgisayar)
+  elif bilgisayar==kagıt:
+    print("berabere","bilgisayar secimi: ",bilgisayar)
+  else:
+    print("kaybettiniz","bilgisayar secimi: ",bilgisayar)
