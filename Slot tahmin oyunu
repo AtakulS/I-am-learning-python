@@ -1,0 +1,8 @@
+slot=["tavuk,","karpuz","yedi","portakal","limon","çilek","armut","pasta"]
+sayac=0
+secim=random.choices(slot,k=3)
+while secim[0]!=secim[1] or secim[0]!=secim[2]:
+  secim=random.choices(slot,k=3)
+  sayac=sayac+1
+  print(secim)
+print("tebrikler","Deneme sayısı: ",sayac)
