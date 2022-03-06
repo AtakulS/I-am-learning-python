@@ -1,0 +1,11 @@
+deneme=5
+bilgisayar=random.choice(range(10))
+for i in range(6):
+  kullanıcı=float(input("1-10 arası sayı seçiniz: "))
+  if kullanıcı==bilgisayar:
+    print("Tebrikler kazandınız","bilgisayar seçimi: ",bilgisayar)
+    break
+  else:
+    print("tekrar deneyin",deneme,"hakkınız kaldı")
+    deneme-=1
+    continue
