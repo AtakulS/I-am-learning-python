@@ -1,0 +1,13 @@
+import json
+from urllib.request import urlopen
+def tatilgetir(yil,ulke):
+    link = "https://date.nager.at/api/v2/publicholidays/"+yil+"/"+ulke ## tatilleri çektiğim link "https://date.nager.at/"
+    with urlopen (link) as response:
+      kaynak=response.read()
+    veri=json.loads(kaynak)
+    return veri
+    
+    tatilgetir("2022","TR") 
+    
+    for tatil in tatilgetir('2022',"TR"): ## daha düzenli hale getirmek için for döngüsü kullandım
+  print(tatil['name'],tatil['date'])
